@@ -1,5 +1,10 @@
 In this README i'll show my evolution using the fantastic toll Ansible.
 
+Terms using in cmd
+-  Flag -i = (inventory) file when have your hosts
+- Flag -u =(user) espesific user using in your endpoints
+- Flag -m =(module) here you will put your molule exaple shell
+
 Frist lets create a file with name host, then put in side there your endpoint ex:
 ```
 [endpoint]
