@@ -1,12 +1,17 @@
 ---
 - hosts: all
   tasks:
-  - name: 'instala o php'
-      apt:
-      name: php
+  - name: 'install dependencies'
+    apt:
+      name: "{{ item }}"
       state: latest
     become: yes
-  - name: 'instala o nginx'
-      apt: nginx
-      state: latest
+    with_items: 
+      - php
+      - nginx
+
+  - name: 'delete apache2'
+    apt:
+      name: apache2
+      state: absent
     become: yes
