@@ -20,3 +20,15 @@ now i execute my frist playbook, i create i file provisioning.yaml and a use the
 
 i'm command line i use:
 `ansible-playbook provisioning.yaml -u root -i hosts`
+
+now  i learning how using look to install thinks, exeple:
+```yaml
+- name: 'install dependencies'
+    apt:
+      name: "{{ item }}"
+      state: latest
+    become: yes
+    with_items: 
+      - php
+      - nginx
+```
