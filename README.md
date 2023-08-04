@@ -15,7 +15,7 @@ now i execute my frist playbook, i create i file provisioning.yaml and a use the
 ---
 - hosts: all
   tasks:
-  - shell: 'echo Hello > /home/teste.txt `
+  - shell: 'echo Hello > /home/teste.txt'
 ```
 
 i'm command line i use:

@@ -1,4 +1,12 @@
 ---
 - hosts: all
   tasks:
-  - shell: 'echo Hello > /home/teste.txt'
+  - name: 'instala o php'
+      apt:
+      name: php
+      state: latest
+    become: yes
+  - name: 'instala o nginx'
+      apt: nginx
+      state: latest
+    become: yes
